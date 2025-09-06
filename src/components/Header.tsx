@@ -18,9 +18,9 @@ const Header: React.FC = () => {
           <Link href="/" passHref>
             <div className="flex items-center">
               <Image
-                src="/assets/images/logo.png"
+                src="/assets/images/logo1.png"
                 alt="PunkFi"
-                width={120}
+                width={90}
                 height={40}
                 className="hover:opacity-80 transition-opacity"
               />

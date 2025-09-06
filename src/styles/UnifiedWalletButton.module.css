@@ -50,9 +50,23 @@
 .network_display {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 0 12px;
+  gap: 8px;
+  padding: 0 14px;
+  background-color: rgba(0, 0, 0, 0.5);
   border-right: 1px solid rgba(255, 0, 255, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+/* Background handled dynamically in component */
+
+.network_text {
+  font-family: 'Monoton', cursive;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 2px #00c2ff;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
 .network_indicator {
@@ -61,7 +75,19 @@
   border-radius: 50%;
   background-color: #00c2ff;
   box-shadow: 0 0 3px #00c2ff;
-  /* Removed the animation for less visual noise */
+  /* Subtle pulse animation that's not too distracting */
+  animation: subtlePulse 3s infinite alternate ease-in-out;
+}
+
+@keyframes subtlePulse {
+  0% {
+    opacity: 0.8;
+    box-shadow: 0 0 3px #00c2ff;
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 5px #00c2ff;
+  }
 }
 
 .dropdown_icon {
@@ -132,3 +158,5 @@
   text-shadow: 0 0 3px #fff, 0 0 7px #ff00ff, 0 0 10px #ff00ff;
   color: #fff;
 }
+
+/* Network text hover effect is now handled inline in the component */

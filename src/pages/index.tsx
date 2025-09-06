@@ -24,7 +24,7 @@ const ContentOverlay = () => {
 
   return (
     <div className={`${styles.overlay} ${styles.fadeInOverlay}`}>
-      <div className={styles.logoContainer}>
+      {/* <div className={styles.logoContainer}>
         <Image
           src="/assets/images/logo.png"
           alt="PunkFi Logo"
@@ -33,7 +33,7 @@ const ContentOverlay = () => {
           className={styles.logo}
           priority
         />
-      </div>
+      </div> */}
 
       <div className={styles.contentContainer}>
         <div className={styles.titleContainer}>
