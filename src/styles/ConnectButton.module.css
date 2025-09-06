@@ -1,0 +1,247 @@
+/* Custom styles for the ConnectWallet button */
+.retro_connect_container {
+  position: relative;
+  border: 2px solid #ff00ff;
+  border-radius: 6px;
+  background: linear-gradient(135deg, rgba(255,0,255,0.1) 0%, rgba(124,58,237,0.1) 100%);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 1px;
+}
+
+.retro_connect_container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #ff00ff, #00c2ff, #7c3aed, #ff00ff);
+  z-index: -1;
+  background-size: 300% 100%;
+  animation: neonBorder 6s linear infinite;
+}
+
+/* Styling for the simple wrapper */
+.retro_wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.retro_glow_border {
+  position: relative;
+  padding: 2px;
+  background: linear-gradient(90deg, #ff00ff, #00c2ff, #7c3aed, #ff00ff);
+  background-size: 300% 100%;
+  border-radius: 6px;
+  animation: neonBorder 6s linear infinite;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+  overflow: hidden;
+}
+
+/* Add a pulsing glow effect */
+.retro_glow_border::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 0, 255, 0.15);
+  z-index: 1;
+  opacity: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.retro_connect_container:hover::before {
+  animation: neonBorder 2s linear infinite;
+}
+
+.retro_connect_button {
+  background: #000;
+  color: white;
+  font-family: 'Monoton', cursive;
+  letter-spacing: 0.05em;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.retro_connect_button:hover {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff;
+}
+
+/* Wrong network styling */
+.wrong_network {
+  animation: glitchEffect 0.3s infinite;
+}
+
+.glitchText {
+  position: relative;
+  display: inline-block;
+}
+
+.glitchText::before,
+.glitchText::after {
+  content: 'Wrong Network';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitchText::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff0000;
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim 3s infinite linear alternate-reverse;
+}
+
+.glitchText::after {
+  left: -2px;
+  text-shadow: -2px 0 #00c2ff;
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim2 2.5s infinite linear alternate-reverse;
+}
+
+/* Chain button styling */
+.chain_button {
+  display: flex;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  font-family: 'Monoton', cursive;
+  padding: 0 10px;
+  letter-spacing: 0.05em;
+  border: 1px solid #ff00ff;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #ff00ff;
+  transition: all 0.3s ease;
+}
+
+.chain_button:hover {
+  box-shadow: 0 0 8px #ff00ff, 0 0 12px #7c3aed;
+}
+
+.chain_icon_container {
+  background: transparent;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-right: 6px;
+  filter: drop-shadow(0 0 2px #ff00ff);
+}
+
+.chain_icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Scanline effect for text */
+.scanlineEffect {
+  position: relative;
+  display: inline-block;
+}
+
+.scanlineEffect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(255, 255, 255, 0.8) 50%,
+    transparent 51%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  animation: scanlines 0.75s steps(60) infinite;
+  z-index: 2;
+  opacity: 0.15;
+}
+
+@keyframes neonBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glitchEffect {
+  0% { transform: translate(0); }
+  25% { transform: translate(-1px, 1px); }
+  50% { transform: translate(1px, -1px); }
+  75% { transform: translate(-1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-anim {
+  0% { clip: rect(21px, 9999px, 25px, 0); }
+  5% { clip: rect(63px, 9999px, 91px, 0); }
+  10% { clip: rect(3px, 9999px, 70px, 0); }
+  /* More variations */
+  100% { clip: rect(96px, 9999px, 78px, 0); }
+}
+
+@keyframes glitch-anim2 {
+  0% { clip: rect(65px, 9999px, 12px, 0); }
+  5% { clip: rect(5px, 9999px, 75px, 0); }
+  10% { clip: rect(7px, 9999px, 24px, 0); }
+  /* More variations */
+  100% { clip: rect(26px, 9999px, 18px, 0); }
+}
+
+@keyframes scanlines {
+  from { background-position: 0 0; }
+  to { background-position: 0 4px; }
+}
+
+/* Scanlines overlay for retro CRT effect */
+.scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+  border-radius: 8px;
+}
+
+.scanlines:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%
+  );
+  background-size: 100% 4px;
+  animation: scanline 0.5s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(4px); }
+}

@@ -1,0 +1,164 @@
+/* Custom retro modal styles for RainbowKit */
+.retroOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+  animation: overlayFadeIn 0.3s ease-out;
+}
+
+.retroModalContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #130021 0%, #290042 100%);
+  border: 2px solid #ff00ff;
+  box-shadow: 
+    0 0 15px #ff00ff,
+    0 0 30px rgba(255, 0, 255, 0.5),
+    inset 0 0 10px rgba(255, 0, 255, 0.3);
+  border-radius: 8px;
+  z-index: 101;
+  animation: modalScaleIn 0.3s ease-out;
+  width: 90%;
+  max-width: 420px;
+  overflow: hidden;
+}
+
+.retroModalHeader {
+  background: linear-gradient(90deg, #ff00ff, #7c3aed);
+  padding: 15px 20px;
+  text-align: center;
+  font-family: 'Monoton', cursive;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff;
+  position: relative;
+}
+
+.retroModalContent {
+  padding: 20px;
+  font-family: 'VT323', monospace;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.retroButton {
+  background: #000;
+  border: 2px solid #ff00ff;
+  color: white;
+  text-shadow: 0 0 5px #ff00ff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+  padding: 8px 16px;
+  font-family: 'Monoton', cursive;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.retroButton:hover {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+.walletOption {
+  background: #000;
+  border: 1px solid #ff00ff;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.walletOption:hover {
+  background: #1a0029;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+  transform: translateX(5px);
+}
+
+.walletIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
+  filter: drop-shadow(0 0 2px #ff00ff);
+}
+
+.walletName {
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.closeButton {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalScaleIn {
+  from { 
+    transform: translate(-50%, -50%) scale(0.9); 
+    opacity: 0;
+  }
+  to { 
+    transform: translate(-50%, -50%) scale(1); 
+    opacity: 1;
+  }
+}
+
+/* Scanning lines effect */
+.scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.scanlines:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.05) 50%
+  );
+  background-size: 100% 4px;
+  animation: scanline 0.5s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(4px); }
+}

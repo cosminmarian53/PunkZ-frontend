@@ -16,7 +16,7 @@
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Mr+Dafoe&family=Monoton&family=Permanent+Marker&family=Righteous&family=Titillium+Web:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Mr+Dafoe&family=Monoton&family=Permanent+Marker&family=Righteous&family=Titillium+Web:wght@900&family=VT323&display=swap');
 
 html,
 body {
@@ -67,4 +67,104 @@ a {
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--neon-purple) #0f0f0f;
+}
+
+/* Custom styling for RainbowKit's modal */
+[data-rk] {
+  --rk-colors-modalBackground: #130021;
+  --rk-colors-modalText: #ffffff;
+  --rk-colors-modalTextSecondary: #ff00ff;
+  --rk-colors-profileAction: rgba(255, 0, 255, 0.2);
+  --rk-colors-profileActionHover: rgba(255, 0, 255, 0.5);
+  --rk-colors-accentColor: #ff00ff;
+  --rk-shadows-connectButton: 0 0 10px 2px #ff00ff;
+  --rk-shadows-dialog: 0 0 15px 3px #ff00ff;
+}
+
+/* Style the RainbowKit modal */
+[data-rk] .rk-modal-container > div {
+  background: linear-gradient(135deg, #130021 0%, #290042 100%) !important;
+  border: 2px solid #ff00ff !important;
+  box-shadow: 0 0 15px #ff00ff, 0 0 30px rgba(255, 0, 255, 0.5) !important;
+}
+
+/* Style wallet buttons in the modal */
+[data-rk] .rk-wallet-option {
+  background: #000 !important;
+  border: 1px solid #ff00ff !important;
+  transition: all 0.3s ease !important;
+}
+
+[data-rk] .rk-wallet-option:hover {
+  background: #1a0029 !important;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5) !important;
+  transform: translateX(5px) !important;
+}
+
+/* Style the connect button specifically */
+[data-rk] .rk-connect-button {
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  background: linear-gradient(to right, #130021, #290042) !important;
+  transition: all 0.3s ease !important;
+}
+
+[data-rk] .rk-connect-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.7) !important;
+}
+
+/* Style the account modal button */
+[data-rk] .rk-account-button {
+  background: linear-gradient(to right, #130021, #290042) !important;
+  box-shadow: 0 0 5px #ff00ff !important;
+  border: 1px solid #ff00ff !important;
+}
+
+/* Custom button text color */
+[data-rk] .rk-button-text {
+  font-family: 'VT323', monospace !important;
+  font-size: 1.2rem !important;
+  color: white !important;
+  text-shadow: 0 0 5px #ff00ff !important;
+}
+
+/* Hide the divider line between network and account */
+[data-rk] .rk-account-button-inner div[role="separator"] {
+  display: none !important;
+}
+
+/* Adjust spacing between elements now that divider is gone */
+[data-rk] .rk-account-button-inner {
+  gap: 8px !important;
+}
+
+/* Make the whole button look more unified */
+[data-rk] .rk-account-button {
+  background: black !important;
+  border: none !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+  padding: 8px 12px !important;
+}
+
+/* Override the network button styles to match your reference image */
+[data-rk] .rk-chain-button {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Style the avatar/address part */
+[data-rk] .rk-account-button .rk-account-button-inner > div:nth-child(3) {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Ensure the connect button has dark background and neon text */
+[data-rk] .rk-connect-button {
+  background: black !important;
+  padding: 8px 14px !important;
+  color: white !important;
+  border: none !important;
 }

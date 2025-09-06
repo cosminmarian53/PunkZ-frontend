@@ -1,0 +1,134 @@
+.unified_button_container {
+  background: #000;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(255, 0, 255, 0.5);
+}
+
+.neon_border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #ff00ff;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 2;
+  box-shadow: 0 0 5px #ff00ff, inset 0 0 2px #ff00ff;
+  /* Removed the animation for a more subtle, less distracting effect */
+}
+
+.wallet_address {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  font-family: 'Monoton', cursive;
+  font-size: 16px;
+  color: white;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 2px #ff00ff;
+  transition: all 0.3s ease;
+}
+
+.wallet_icon {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.wallet_icon img {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+}
+
+.network_display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  border-right: 1px solid rgba(255, 0, 255, 0.3);
+}
+
+.network_indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #00c2ff;
+  box-shadow: 0 0 3px #00c2ff;
+  /* Removed the animation for less visual noise */
+}
+
+.dropdown_icon {
+  margin-left: 6px;
+  opacity: 0.8;
+  transition: transform 0.2s ease;
+}
+
+.unified_button_container:hover .dropdown_icon {
+  transform: rotate(180deg);
+}
+
+/* Glowing effect on hover */
+.unified_button_container:hover {
+  box-shadow: 0 0 8px rgba(255, 0, 255, 0.7);
+  transform: translateY(-1px);
+}
+
+.unified_button_container:hover .neon_border {
+  box-shadow: 0 0 6px #ff00ff, inset 0 0 3px #ff00ff;
+  border-color: #ff40ff;
+}
+
+/* Enhance text glow on hover */
+.unified_button_container:hover .wallet_address {
+  text-shadow: 0 0 2px #fff, 0 0 5px #ff00ff;
+  color: #fff;
+}
+
+/* Special styling for connect text */
+.connect_text {
+  font-family: 'Monoton', cursive;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: linear-gradient(to right, #ff00ff, #00c2ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  /* Removed the flickering animation for better readability */
+  text-shadow: 0 0 2px #ff00ff;
+}
+
+/* Error text styling */
+.error_text {
+  font-family: 'Monoton', cursive;
+  color: #ff3333;
+  text-shadow: 0 0 3px #ff3333;
+  animation: errorBlink 1.2s infinite alternate;
+  letter-spacing: 2px;
+}
+
+@keyframes errorBlink {
+  0% {
+    text-shadow: 0 0 2px #ff3333;
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 0 0 4px #ff3333;
+    opacity: 0.9;
+  }
+}
+
+/* Enhanced hover effect specifically for connect button */
+.unified_button_container:hover .connect_text {
+  animation: none;
+  text-shadow: 0 0 3px #fff, 0 0 7px #ff00ff, 0 0 10px #ff00ff;
+  color: #fff;
+}

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
 import MobileNav from "./MobileNav";
+import UnifiedWalletButton from "./UnifiedWalletButton";
 
 const Header: React.FC = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -130,7 +130,7 @@ const Header: React.FC = () => {
 
         <div className="flex items-center space-x-4">
           <div className="hidden sm:block">
-            <ConnectButton />
+            <UnifiedWalletButton />
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -165,8 +165,8 @@ const Header: React.FC = () => {
 
       {/* Mobile wallet connect button - fixed at bottom */}
       <div className="fixed bottom-4 left-0 right-0 flex justify-center sm:hidden z-30">
-        <div className="bg-black/80 backdrop-blur-md border border-fuchsia-900/30 rounded-full px-2 py-1">
-          <ConnectButton />
+        <div className="bg-black/80 backdrop-blur-md px-2 py-1">
+          <UnifiedWalletButton isMobile={true} />
         </div>
       </div>
     </>
