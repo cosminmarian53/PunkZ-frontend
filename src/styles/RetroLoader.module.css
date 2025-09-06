@@ -117,7 +117,7 @@
 
 .loadingBarProgress {
   height: 100%;
-  background: linear-gradient(to bottom, #FFD700 0%, #c85 50%, #FFD700 100%);
+  background: linear-gradient(to bottom, #d400ff 0%, rgb(223, 65, 248) 50%, #a302a9 100%);
   background-size: 100% 20px;
   box-shadow: 0 0 10px 0px orange;
   position: relative;

@@ -28,30 +28,102 @@ const Header: React.FC = () => {
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        {/* Desktop Navigation - Retro Style */}
+        <nav className="hidden md:flex items-center space-x-10">
           <Link href="/dashboard" passHref>
-            <span className="hover:text-fuchsia-400 transition-all font-medium text-fuchsia-100 uppercase tracking-widest text-sm relative group">
-              Dashboard
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+            <span
+              className="transition-all text-fuchsia-100 uppercase tracking-wider text-sm relative group hover:text-transparent px-2 py-1"
+              style={{
+                fontFamily: "'Monoton', cursive",
+                letterSpacing: "0.1em",
+                fontSize: "0.85rem",
+              }}
+            >
+              <span
+                className="absolute inset-0 flex items-center justify-center group-hover:opacity-100 opacity-0 transition-opacity duration-300"
+                style={{
+                  color: "#fff",
+                  textShadow:
+                    "0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff",
+                }}
+              >
+                Dashboard
+              </span>
+              <span className="group-hover:opacity-0 transition-opacity duration-300">
+                Dashboard
+              </span>
             </span>
           </Link>
           <Link href="/markets" passHref>
-            <span className="hover:text-fuchsia-400 transition-all font-medium text-fuchsia-100 uppercase tracking-widest text-sm relative group">
-              Markets
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+            <span
+              className="transition-all text-fuchsia-100 uppercase tracking-wider text-sm relative group hover:text-transparent px-2 py-1"
+              style={{
+                fontFamily: "'Monoton', cursive",
+                letterSpacing: "0.1em",
+                fontSize: "0.85rem",
+              }}
+            >
+              <span
+                className="absolute inset-0 flex items-center justify-center group-hover:opacity-100 opacity-0 transition-opacity duration-300"
+                style={{
+                  color: "#fff",
+                  textShadow:
+                    "0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00c2ff, 0 0 20px #00c2ff, 0 0 25px #00c2ff",
+                }}
+              >
+                Markets
+              </span>
+              <span className="group-hover:opacity-0 transition-opacity duration-300">
+                Markets
+              </span>
             </span>
           </Link>
           <Link href="/deposit" passHref>
-            <span className="hover:text-fuchsia-400 transition-all font-medium text-fuchsia-100 uppercase tracking-widest text-sm relative group">
-              Deposit
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+            <span
+              className="transition-all text-fuchsia-100 uppercase tracking-wider text-sm relative group hover:text-transparent px-2 py-1"
+              style={{
+                fontFamily: "'Monoton', cursive",
+                letterSpacing: "0.1em",
+                fontSize: "0.85rem",
+              }}
+            >
+              <span
+                className="absolute inset-0 flex items-center justify-center group-hover:opacity-100 opacity-0 transition-opacity duration-300"
+                style={{
+                  color: "#fff",
+                  textShadow:
+                    "0 0 5px #fff, 0 0 10px #fff, 0 0 15px #7c3aed, 0 0 20px #7c3aed, 0 0 25px #7c3aed",
+                }}
+              >
+                Deposit
+              </span>
+              <span className="group-hover:opacity-0 transition-opacity duration-300">
+                Deposit
+              </span>
             </span>
           </Link>
           <Link href="/borrow" passHref>
-            <span className="hover:text-fuchsia-400 transition-all font-medium text-fuchsia-100 uppercase tracking-widest text-sm relative group">
-              Borrow
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+            <span
+              className="transition-all text-fuchsia-100 uppercase tracking-wider text-sm relative group hover:text-transparent px-2 py-1"
+              style={{
+                fontFamily: "'Monoton', cursive",
+                letterSpacing: "0.1em",
+                fontSize: "0.85rem",
+              }}
+            >
+              <span
+                className="absolute inset-0 flex items-center justify-center group-hover:opacity-100 opacity-0 transition-opacity duration-300"
+                style={{
+                  color: "#fff",
+                  textShadow:
+                    "0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff",
+                }}
+              >
+                Borrow
+              </span>
+              <span className="group-hover:opacity-0 transition-opacity duration-300">
+                Borrow
+              </span>
             </span>
           </Link>
         </nav>
