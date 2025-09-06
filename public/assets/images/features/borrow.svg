@@ -1,0 +1,24 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="32" fill="url(#paint0_radial_borrow)" fill-opacity="0.2"/>
+  
+  <!-- Main Icon Shape -->
+  <path d="M48 32C48 40.8366 40.8366 48 32 48C23.1634 48 16 40.8366 16 32C16 23.1634 23.1634 16 32 16C40.8366 16 48 23.1634 48 32Z" stroke="#00C6FF" stroke-width="2"/>
+  
+  <!-- Dollar Sign -->
+  <path d="M32 22V42" stroke="#00C6FF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M36 26H30C28.3431 26 27 27.3431 27 29C27 30.6569 28.3431 32 30 32H34C35.6569 32 37 33.3431 37 35C37 36.6569 35.6569 38 34 38H28" stroke="#00C6FF" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Glow Effects -->
+  <circle cx="32" cy="32" r="15" stroke="url(#paint1_radial_borrow)" stroke-width="0.5"/>
+  
+  <defs>
+    <radialGradient id="paint0_radial_borrow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(32 32) rotate(90) scale(32)">
+      <stop stop-color="#00C6FF"/>
+      <stop offset="1" stop-color="#00C6FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="paint1_radial_borrow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(32 32) rotate(90) scale(20)">
+      <stop stop-color="#00C6FF"/>
+      <stop offset="1" stop-color="#00C6FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

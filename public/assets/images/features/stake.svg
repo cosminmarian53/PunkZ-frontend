@@ -1,0 +1,27 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="32" fill="url(#paint0_radial_stake)" fill-opacity="0.2"/>
+  
+  <!-- Main Icon Shape -->
+  <path d="M48 32C48 40.8366 40.8366 48 32 48C23.1634 48 16 40.8366 16 32C16 23.1634 23.1634 16 32 16C40.8366 16 48 23.1634 48 32Z" stroke="#9900FF" stroke-width="2"/>
+  
+  <!-- Staking Symbol -->
+  <path d="M25 34L32 27L39 34" stroke="#9900FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M25 41L32 34L39 41" stroke="#9900FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Token Circle -->
+  <circle cx="32" cy="24" r="5" stroke="#9900FF" stroke-width="2"/>
+  
+  <!-- Glow Effects -->
+  <circle cx="32" cy="32" r="15" stroke="url(#paint1_radial_stake)" stroke-width="0.5"/>
+  
+  <defs>
+    <radialGradient id="paint0_radial_stake" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(32 32) rotate(90) scale(32)">
+      <stop stop-color="#9900FF"/>
+      <stop offset="1" stop-color="#9900FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="paint1_radial_stake" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(32 32) rotate(90) scale(20)">
+      <stop stop-color="#9900FF"/>
+      <stop offset="1" stop-color="#9900FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

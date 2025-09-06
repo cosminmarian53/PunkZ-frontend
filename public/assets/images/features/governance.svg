@@ -1,0 +1,32 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="32" fill="url(#paint0_radial_governance)" fill-opacity="0.2"/>
+  
+  <!-- Main Icon Shape -->
+  <path d="M48 32C48 40.8366 40.8366 48 32 48C23.1634 48 16 40.8366 16 32C16 23.1634 23.1634 16 32 16C40.8366 16 48 23.1634 48 32Z" stroke="#00FF66" stroke-width="2"/>
+  
+  <!-- Governance Building -->
+  <path d="M24 41V30H40V41" stroke="#00FF66" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M22 41H42" stroke="#00FF66" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Building Columns -->
+  <path d="M28 30V41" stroke="#00FF66" stroke-width="2"/>
+  <path d="M32 30V41" stroke="#00FF66" stroke-width="2"/>
+  <path d="M36 30V41" stroke="#00FF66" stroke-width="2"/>
+  
+  <!-- Building Roof -->
+  <path d="M22 30L32 23L42 30" stroke="#00FF66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Glow Effects -->
+  <circle cx="32" cy="32" r="15" stroke="url(#paint1_radial_governance)" stroke-width="0.5"/>
+  
+  <defs>
+    <radialGradient id="paint0_radial_governance" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(32 32) rotate(90) scale(32)">
+      <stop stop-color="#00FF66"/>
+      <stop offset="1" stop-color="#00FF66" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="paint1_radial_governance" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(32 32) rotate(90) scale(20)">
+      <stop stop-color="#00FF66"/>
+      <stop offset="1" stop-color="#00FF66" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

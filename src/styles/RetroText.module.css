@@ -1,0 +1,248 @@
+/* 80's Retro Text Styles */
+
+.chrome {
+  position: relative;
+  background-image: linear-gradient(#5200c6 0%, #bc00dd 46%, #ffffff 50%, #32120E 54%, #ff00c1 58%, #8a0868 90%, #b313e2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 4px #f5f5f5;
+  font-size: 200px;
+  font-family: 'Titillium Web', sans-serif;
+  font-style: italic;
+  margin: 0;
+  line-height: 1;
+  display: block;
+  letter-spacing: -5px;
+}
+
+.chrome:before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-image: linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+  background-position: -680px 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0;
+  padding-right: 300px;
+  animation-name: chrome_effect;
+  animation-duration: 6s;
+  animation-delay: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.dreams {
+  position: relative;
+  margin: 0;
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 160px;
+  color: #F975F7;
+  transform: rotate(-15deg);
+  margin-left: 400px;
+  margin-top: -120px;
+  -webkit-text-stroke: 1px #f008b7;
+  filter: drop-shadow(2px 2px 20px #f008b7);
+  z-index: 20;
+}
+
+.vectro {
+  position: relative;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.1px #f1f1f1;
+  font-family: 'Righteous', cursive;
+  font-size: 160px;
+  margin: 150px 0 50px 0;
+}
+
+.vectro:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 2px);
+}
+
+.vectro-body {
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(#C3BFB4 0%, #FDFCFA 50%, #E8E7E5 51%, #757172 52%, #E8E9DB 100%);
+  filter: drop-shadow(2px 2px 15px #3F59F4);
+}
+
+.vectro-red {
+  color: #F10C20;
+  -webkit-text-fill-color: #F10C20;
+  -webkit-text-stroke: 0;
+  filter: drop-shadow(2px 2px 15px #F10C20);
+  font-style: italic;
+  padding-right: 20px;
+}
+
+.vectro-green {
+  color: #6BFF2B;
+  -webkit-text-fill-color: #6BFF2B;
+  filter: drop-shadow(2px 2px 15px #6BFF2B);
+  -webkit-text-stroke: 0;
+  font-style: italic;
+  padding-right: 20px;
+  margin-left: -20px;
+}
+
+.vectro-blue {
+  color: #3F59F4;
+  -webkit-text-fill-color: #3F59F4;
+  filter: drop-shadow(2px 2px 15px #3F59F4);
+  -webkit-text-stroke: 0;
+  font-style: italic;
+  padding-right: 20px;
+  margin-left: -20px;
+}
+
+.street-machine {
+  position: relative;
+}
+
+.street {
+  position: relative;
+  font-family: 'Candal', sans-serif;
+  font-size: 180px;
+  font-style: italic;
+  -webkit-text-stroke: 0.1px #ed2121;
+  color: #fff;
+  text-shadow: -10px 10px 0px #ed2121;
+  margin: 0;
+}
+
+.street:before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 665px;
+  top: 83px;
+  left: 48px;
+  background: #ed2121;
+  box-shadow: -8px 13px #ed2121;
+}
+
+.street:after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 639px;
+  top: 109px;
+  left: 36px;
+  background: #ed2121;
+  box-shadow: -4px 13px #ed2121;
+}
+
+.machine {
+  position: absolute;
+  left: 50px;
+  top: 350px;
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 130px;
+  transform: rotate(-15deg);
+  color: #ed2121;
+  margin: 0;
+  margin-top: -160px;
+  padding-left: 430px;
+  text-shadow: 1px 2px 0px #F9D2D2;
+}
+
+.victory {
+  position: relative;
+  font-family: 'Permanent Marker', cursive;
+  font-variant: small-caps;
+  font-size: 180px;
+  transform: skew(-15deg,-15deg);
+  padding-left: 80px;
+  background-image: linear-gradient(#FF0FF8 0%, #F9F9F7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  filter: drop-shadow(2px 2px 20px #f008b7);
+}
+
+.victory:before {
+  content: '-';
+  position: absolute;
+  bottom: -98px;
+  left: 254px;
+  background-image: linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 70px -7px #F3C8F3;
+}
+
+.victory:after {
+  content: '-';
+  position: absolute;
+  bottom: -85px;
+  left: 395px;
+  background-image: linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 70px -5px #F3C8F3;
+}
+
+.victory-v {
+  position: relative;
+  background-image: linear-gradient(#FF0FF8 0%, #F9F9F7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  padding-right: 18px;
+  margin-right: -18px;
+}
+
+.future-cop {
+  position: relative;
+  margin-top: 500px;
+}
+
+.future {
+  position: absolute;
+  left: 0;
+  top: -310px;
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 200px;
+  margin-top: 160px;
+  margin-bottom: 0;
+  color: #EB219B;
+  -webkit-text-fill-color: rgba(253, 90, 250, 1);
+  text-shadow: -2px -2px 0 #FFBAF2;
+  filter: drop-shadow(3px 3px 1px #441F62);
+  transform: skew(-5deg,-5deg);
+  font-weight: normal;
+  z-index: 2;
+  margin-left: 60px;
+  padding-left: 50px;
+  padding-right: 70px;
+}
+
+.cop {
+  position: relative;
+  font-family: 'Monoton', cursive;
+  font-size: 200px;
+  line-height: 1;
+  margin: 0;
+  margin-top: -95px;
+  padding-left: 80px;
+  background-image: linear-gradient(#022486 0%, #0AD0FD 30%, #BDFCFC 40%, #D8FFFF 44%, #00081C 44%, #00081C 50%, #074A67 52%, #1CD8FE 60%, #7FEDFE 62%, #96F5FC 70%, #0FD8FA 73%, #0BD2FD 88%, #AFFDFF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+@keyframes chrome_effect {
+  0% {background-position:-680px 0;}
+  10% {background-position:420px 0;}
+  100% {background-position:420px 0;}
+}
