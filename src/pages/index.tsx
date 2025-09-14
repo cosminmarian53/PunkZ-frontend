@@ -7,14 +7,18 @@ import ResponsiveRetroText from "../components/ResponsiveRetroText";
 import styles from "../styles/Home.module.css";
 import InfoSection from "../components/InfoSection";
 
+import useIsMobile from "../hooks/useIsMobile";
+
 const ContentOverlay = () => {
+  const isMobile = useIsMobile();
+
   return (
     <div className={styles.contentOverlay}>
       <div className={styles.titleContainer}>
         <ResponsiveRetroText
           text="PUNKZ"
           fontFamily="Monoton"
-          fontSize="6rem"
+          fontSize={isMobile ? "15vw" : "6rem"}
           color="#ff00ff"
           glowColor="#ff00ff"
           className={styles.flickering}
