@@ -27,44 +27,51 @@ const RetroWalletSelector: React.FC = () => {
 
   return (
     <>
-      <button 
+      <button
         onClick={() => setIsModalOpen(true)}
         className={styles.retroButton}
       >
         Connect Wallet
       </button>
-      
+
       <RetroModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         title="Select Your Wallet"
       >
         <div>
-          <p style={{ marginBottom: '20px', textAlign: 'center' }}>
+          <p style={{ marginBottom: "20px", textAlign: "center" }}>
             Choose a wallet to connect to PunkFi protocol
           </p>
-          
+
           {walletOptions.map((wallet) => (
-            <div 
+            <div
               key={wallet.id}
               className={styles.walletOption}
               onClick={() => handleWalletSelect(wallet.id)}
             >
               <div className={styles.walletIcon}>
                 {/* Use a placeholder or the actual wallet icon */}
-                <img 
-                  src={wallet.iconUrl} 
-                  alt={`${wallet.name} icon`} 
-                  width={30} 
-                  height={30} 
-                  style={{ objectFit: 'contain' }}
+                <Image
+                  src={wallet.iconUrl}
+                  alt={`${wallet.name} icon`}
+                  width={30}
+                  height={30}
+                  style={{ objectFit: "contain" }}
                 />
               </div>
               <div className={styles.walletName}>{wallet.name}</div>
             </div>
           ))}
-          
-          <p style={{ fontSize: '0.8rem', marginTop: '20px', opacity: 0.7, textAlign: 'center' }}>
+
+          <p
+            style={{
+              fontSize: "0.8rem",
+              marginTop: "20px",
+              opacity: 0.7,
+              textAlign: "center",
+            }}
+          >
             By connecting a wallet, you agree to PunkFi&apos;s Terms of Service
           </p>
         </div>

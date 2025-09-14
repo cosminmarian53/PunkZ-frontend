@@ -68,7 +68,7 @@ const RetroFeature: React.FC<RetroFeatureProps> = ({
       } ${isActive ? styles.activeFeature : ""}`}
     >
       <div className={styles.featureIcon}>
-        <img src={icon} alt={`${title} icon`} width={64} height={64} />
+        <Image src={icon} alt={`${title} icon`} width={64} height={64} />
       </div>
       <h3 className={styles.featureTitle}>{title}</h3>
       <p className={styles.featureDescription}>{description}</p>
