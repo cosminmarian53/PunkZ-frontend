@@ -1,27 +1,48 @@
-# PunkFi - Retro-Futuristic DeFi Protocol
+# PunkZ - A ZK Mixer Application
 
 ![PunkFi Banner](https://github.com/cosminmarian53/PunkFi-frontend/blob/main/public/assets/images/logo.png?raw=true)
 
 ## 🌐 Overview
 
-PunkFi is a next-generation DeFi protocol with a distinctive retro-futuristic interface that blends 80s aesthetics with cutting-edge blockchain technology. The platform features an immersive 3D experience, neon visual elements, and a synthwave-inspired design that sets it apart from traditional DeFi applications.
+PunkZ is a decentralized, non-custodial privacy solution for Ethereum, inspired by applications like Tornado Cash. It allows users to deposit assets and later withdraw them to a different address without creating an on-chain link between the two transactions.
+
+Wrapped in a distinctive retro-futuristic interface, PunkZ blends 80s aesthetics with cutting-edge privacy technology, featuring an immersive 3D experience, neon visual elements, and a synthwave-inspired design.
 
 ## ✨ Features
 
-- **Immersive 3D Environment**: Interactive 3D scene powered by React Three Fiber
-- **Retro-Futuristic UI**: Neon-lit interface with cyberpunk aesthetics
-- **Web3 Integration**: Seamless wallet connectivity via RainbowKit
-- **Full DeFi Functionality**: Deposit, borrow, and explore markets with an intuitive interface
-- **Responsive Design**: Optimized for both desktop and mobile experiences
+- **Anonymous Transactions**: Deposit from one address and withdraw to another, breaking the on-chain link.
+- **Zero-Knowledge Proofs**: Utilizes ZKPs (built with Noir) to prove ownership of a deposit without revealing the specific deposit.
+- **Merkle Tree Anonymity**: Each deposit commitment is added to a Merkle tree, strengthening the anonymity set with every new user.
+- **Double-Spend Prevention**: Employs nullifiers to ensure that each deposit can only be withdrawn once.
+- **Immersive 3D Environment**: Interactive 3D scene powered by React Three Fiber.
+- **Retro-Futuristic UI**: Neon-lit interface with synthwave/cyberpunk aesthetics.
+- **Dynamic & Responsive Design**: The UI and typography adapt for a seamless experience on both desktop and mobile.
+
+## ⚙️ How it works
+
+This app allows users to deposit assets and later withdraw them without linking the withdrawal to the deposit. It allows withdrawers to prove ownership of a deposit without revealing which deposit belongs to the withdrawer.
+
+#### Merkle tree for anonymity set:
+- Each deposit has its own unique commitment: `hash` of a secret plus public identifier.
+- These commitments are stored in a Merkle tree.
+- The root of this Merkle tree is updated whenever a new deposit is made.
+
+#### ZK proofs for withdrawals:
+- The withdrawer proves (using Noir) that they know a valid preimage for a commitment in the Merkle tree (without revealing which commitment they know).
+- The proof also confirms that the commitment is part of a valid tree root without revealing which specific leaf they control.
+- To prevent double-spending, the protocol includes a nullifier (a hash of the secret that gets recorded on-chain when withdrawn).
+
+## 💡 How are ZKPs used in this app?
+Zero Knowledge Proofs (ZKPs) allow a prover to convince a verifier that a specific computation was correctly executed without requiring the verifier to rerun it. The proof ensures correctness without revealing the inputs used in the computation. The ‘zero-knowledge’ property means that the proof can be structured in a way that leaks no additional information beyond the validity of the computation itself.
 
 ## 🛠️ Technologies
 
-- **Frontend**: Next.js 15, React 19, TypeScript
-- **Styling**: TailwindCSS 4, CSS Modules
+- **Frontend**: Next.js, React, TypeScript
+- **ZK Proofs**: Noir
+- **Styling**: TailwindCSS, CSS Modules, Google Fonts (Monoton, VT323, etc.)
 - **3D Visualization**: Three.js, React Three Fiber, Drei
-- **Animations**: GSAP (GreenSock Animation Platform)
 - **Web3**: Wagmi, Viem, RainbowKit
-- **State Management**: TanStack Query (React Query)
+- **Device Detection**: Custom React hooks for conditional rendering (e.g., `useIsMobile`)
 
 ## 🚀 Getting Started
 
@@ -93,6 +114,25 @@ The application features an immersive 3D scene built with React Three Fiber, sho
 >
   <SceneContent />
 </Canvas>
+```
+
+### Responsive Retro Text
+
+The main title uses a custom `ResponsiveRetroText` component with conditional font sizing and a flickering neon effect:
+
+```tsx
+import useIsMobile from "../hooks/useIsMobile";
+
+const isMobile = useIsMobile();
+
+<ResponsiveRetroText
+  text="PUNKZ"
+  fontFamily="Monoton"
+  fontSize={isMobile ? "15vw" : "6rem"}
+  color="#ff00ff"
+  glowColor="#ff00ff"
+  className="flickering"
+/>;
 ```
 
 ### Retro UI Elements
