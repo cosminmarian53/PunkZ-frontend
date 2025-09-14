@@ -7,6 +7,7 @@ interface ResponsiveRetroTextProps {
   fontSize: string; // e.g., "15vw"
   color: string;
   glowColor: string;
+  className?: string;
 }
 
 const ResponsiveRetroText: React.FC<ResponsiveRetroTextProps> = ({
@@ -15,8 +16,10 @@ const ResponsiveRetroText: React.FC<ResponsiveRetroTextProps> = ({
   fontSize,
   color,
   glowColor,
+  className,
 }) => {
   const [calculatedFontSize, setCalculatedFontSize] = useState("120px");
+  const [flickerIndex, setFlickerIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const calculateSize = () => {
@@ -27,25 +30,48 @@ const ResponsiveRetroText: React.FC<ResponsiveRetroTextProps> = ({
 
     calculateSize();
     window.addEventListener("resize", calculateSize);
-    return () => window.removeEventListener("resize", calculateSize);
-  }, [fontSize]);
+
+    let flickerTimeout: NodeJS.Timeout;
+
+    const flicker = () => {
+      const randomIndex = Math.floor(Math.random() * text.length);
+      setFlickerIndex(randomIndex);
+
+      setTimeout(() => {
+        setFlickerIndex(null);
+      }, Math.random() * 100 + 50); // Keep it off for a short, variable time
+
+      // Schedule the next flicker at a random interval
+      flickerTimeout = setTimeout(flicker, Math.random() * 4000 + 1000);
+    };
+
+    flickerTimeout = setTimeout(flicker, Math.random() * 4000 + 1000);
+
+    return () => {
+      window.removeEventListener("resize", calculateSize);
+      clearTimeout(flickerTimeout);
+    };
+  }, [fontSize, text.length]);
 
   const style: React.CSSProperties = {
     fontFamily: `'${fontFamily}', sans-serif`,
     fontSize: calculatedFontSize,
     color: color,
-    textShadow: `
-      0 0 5px ${glowColor},
-      0 0 10px ${glowColor},
-      0 0 20px ${glowColor},
-      0 0 40px ${glowColor},
-      0 0 80px ${glowColor}
-    `,
   };
 
   return (
-    <h1 className={styles.retroText} style={style}>
-      {text}
+    <h1 className={`${styles.retroText} ${className || ""}`} style={style}>
+      {text.split("").map((char, index) => (
+        <span
+          key={index}
+          style={{
+            opacity: flickerIndex === index ? 0.1 : 1,
+            transition: "opacity 0.06s",
+          }}
+        >
+          {char}
+        </span>
+      ))}
     </h1>
   );
 };

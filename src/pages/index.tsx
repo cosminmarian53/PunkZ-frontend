@@ -14,9 +14,10 @@ const ContentOverlay = () => {
         <ResponsiveRetroText
           text="PUNKZ"
           fontFamily="Monoton"
-          fontSize="6vw"
+          fontSize="6rem"
           color="#ff00ff"
           glowColor="#ff00ff"
+          className={styles.flickering}
         />
       </div>
       <p className={styles.subtitle}>Unlock financial privacy.</p>

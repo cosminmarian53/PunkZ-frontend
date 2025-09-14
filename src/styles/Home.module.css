@@ -78,6 +78,27 @@
   margin-bottom: 1rem;
 }
 
+.flickering {
+  animation: flicker 3s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #ff00ff,
+      0 0 80px #ff00ff,
+      0 0 90px #ff00ff,
+      0 0 100px #ff00ff,
+      0 0 150px #ff00ff;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
 .subtitle {
   font-family: "VT323", monospace;
   font-size: clamp(1rem, 2vw, 1.6rem);
@@ -403,9 +424,9 @@
     max-width: 100%;
   }
   
-  .titleContainer {
+  /* .titleContainer {
     transform: scale(0.3) translateX(-40%);
-  }
+  } */
   
   .buttonContainer {
     flex-direction: column;

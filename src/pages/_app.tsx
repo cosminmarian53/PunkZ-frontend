@@ -24,7 +24,7 @@ const retroTheme = merge(darkTheme(), {
     modalTextSecondary: "#ff00ff",
   },
   fonts: {
-    body: "'Monoton', cursive",
+    body: "'Orbitron', sans-serif",
   },
   radii: {
     actionButton: "4px",
@@ -47,7 +47,7 @@ const customConnectButtonStyles = `
     border: 1px solid #ff00ff !important;
     text-transform: uppercase !important;
     letter-spacing: 1px !important;
-    font-family: 'Monoton', cursive !important;
+    font-family: 'Orbitron', sans-serif !important;
     transition: all 0.3s ease !important;
   }
 

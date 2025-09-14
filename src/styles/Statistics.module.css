@@ -15,7 +15,6 @@
     font-family: 'Monoton', cursive;
     font-size: 1.5rem;
     color: #00f2ff;
-    text-shadow: 0 0 5px #00f2ff;
     margin-bottom: 1.5rem;
     text-align: center;
   }
@@ -36,7 +35,6 @@
     font-family: 'Monoton', cursive;
     font-size: 3rem;
     color: #fff;
-    text-shadow: 0 0 10px #00f2ff;
     margin: 0.5rem 0;
   }
   

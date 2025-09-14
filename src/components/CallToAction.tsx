@@ -5,7 +5,7 @@ import Link from "next/link";
 const CallToAction = () => {
   return (
     <section className={styles.ctaSection}>
-      <h2 className={styles.heading}>Ready for Privacy?</h2>
+      <h2 className={styles.heading}>Go Dark.</h2>
       <p className={styles.subheading}>
         Take the first step towards financial anonymity on Ethereum.
       </p>

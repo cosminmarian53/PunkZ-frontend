@@ -46,14 +46,16 @@
 }
 
 .title {
-  font-family: "VT323", monospace;
-  font-size: 2rem;
+  font-family: "Monoton", cursive;
+  font-size: 1.5rem;
   color: #ff00ff;
   text-shadow: 0 0 5px #ff00ff;
 }
 
 .description {
-  font-family: "Titillium Web", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-family: "VT323", monospace;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+  max-width: 100%;
 }

@@ -8,16 +8,17 @@
 }
 
 .heading {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Permanent Marker", cursive;
   font-size: 3.5rem;
   color: #ff00ff;
   text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
   margin-bottom: 1rem;
+  transform: rotate(-2deg);
 }
 
 .subheading {
-  font-family: "Titillium Web", sans-serif;
-  font-size: 1.3rem;
+  font-family: "VT323", monospace;
+  font-size: 1.5rem;
   color: #e0e0e0;
   margin-bottom: 2.5rem;
   max-width: 600px;
@@ -26,7 +27,7 @@
 }
 
 .ctaButton {
-  font-family: "VT323", monospace;
+  font-family: "Monoton";
   font-size: 1.8rem;
   color: #ffffff;
   background: linear-gradient(45deg, #ff00ff, #00f0ff);

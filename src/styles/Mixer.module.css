@@ -25,7 +25,6 @@
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-shadow: 0 0 5px rgba(0, 242, 255, 0.5);
   }
   
   .tabButton:hover {
