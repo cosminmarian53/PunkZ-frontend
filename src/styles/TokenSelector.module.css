@@ -1,0 +1,74 @@
+.tokenSelector {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .selectedToken {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #00f2ff;
+    border-radius: 4px;
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    color: #00f2ff;
+    text-shadow: 0 0 3px #00f2ff;
+    transition: all 0.3s ease;
+  }
+  
+  .selectedToken:hover {
+    background: rgba(0, 242, 255, 0.1);
+    box-shadow: 0 0 8px rgba(0, 242, 255, 0.5);
+  }
+  
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+  
+  .arrowUp {
+    transform: rotate(180deg);
+  }
+  
+  .tokenList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #0d021a;
+    border: 1px solid #00f2ff;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  .tokenOption {
+    padding: 12px 15px;
+    cursor: pointer;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    color: #00f2ff;
+    transition: background 0.2s ease;
+  }
+  
+  .tokenOption:hover {
+    background: rgba(0, 242, 255, 0.2);
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

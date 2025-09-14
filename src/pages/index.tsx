@@ -1,88 +1,58 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import retroStyles from "../styles/RetroText.module.css";
 import Scene3D from "../components/Scene3D";
-import { Suspense, useState, useEffect } from "react";
+import { Suspense } from "react";
 import RetroLoader from "../components/RetroLoader";
-import PresentationSection from "../components/PresentationSection";
+import ResponsiveRetroText from "../components/ResponsiveRetroText";
+import styles from "../styles/Home.module.css";
+import InfoSection from "../components/InfoSection";
 
 const ContentOverlay = () => {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    // Simulate model loading completion with a delay
-    const timer = setTimeout(() => {
-      setVisible(true);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!visible) return null;
-
   return (
-    <div className={`${styles.overlay} ${styles.fadeInOverlay}`}>
-      {/* <div className={styles.logoContainer}>
-        <Image
-          src="/assets/images/logo.png"
-          alt="PunkFi Logo"
-          width={300}
-          height={100}
-          className={styles.logo}
-          priority
+    <div className={styles.contentOverlay}>
+      <div className={styles.titleContainer}>
+        <ResponsiveRetroText
+          text="PUNKZ"
+          fontFamily="Monoton"
+          fontSize="6vw"
+          color="#ff00ff"
+          glowColor="#ff00ff"
         />
-      </div> */}
-
-      <div className={styles.contentContainer}>
-        <div className={styles.titleContainer}>
-          <h1 className={retroStyles.chrome} data-text="PUNKFI">
-            PUNKFI
-          </h1>
-        </div>
-        <h2 className={styles.tagline}>The Future of DeFi. Now.</h2>
       </div>
+      <p className={styles.subtitle}>Unlock financial privacy.</p>
     </div>
   );
 };
 
-// The ProtocolFeatures component has been replaced by PresentationSection
-
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>PunkFi</title>
+        <title>PunkZ - Private Transactions on Ethereum</title>
         <meta
-          content="Aave style protocol with a neon 80's retro look"
+          content="PunkZ is a decentralized, non-custodial privacy solution for Ethereum."
           name="description"
         />
         <link rel="icon" href="/favicon.ico" />
-        {/* Add multiple favicon formats for better compatibility */}
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        {/* Import retro fonts */}
-        <link
-          href="https://fonts.googleapis.com/css?family=Mr+Dafoe|Titillium+Web:900|Righteous|Candal|Permanent+Marker|Monoton"
-          rel="stylesheet"
-        />
       </Head>
 
-      <div className={styles.heroSection}>
-        <div className={styles.sceneContainer}>
-          <Suspense fallback={<RetroLoader />}>
-            <Scene3D />
-            <ContentOverlay />
-          </Suspense>
-        </div>
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "calc(100vh - 4rem)",
+        }}
+      >
+        <Suspense fallback={<RetroLoader />}>
+          <Scene3D />
+        </Suspense>
+        <ContentOverlay />
       </div>
-
-      <main className={styles.main}>
-        <PresentationSection />
-      </main>
+      <InfoSection />
     </div>
   );
 };

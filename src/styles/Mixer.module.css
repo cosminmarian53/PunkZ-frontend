@@ -1,0 +1,75 @@
+.mixerContainer {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #00f2ff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3), inset 0 0 10px rgba(0, 242, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    width: 100%;
+    max-width: 480px;
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .tabContainer {
+    display: flex;
+    border-bottom: 1px solid #00f2ff;
+  }
+  
+  .tabButton {
+    flex: 1;
+    padding: 15px;
+    background: transparent;
+    border: none;
+    color: #00f2ff;
+    font-family: 'Monoton', cursive;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 242, 255, 0.5);
+  }
+  
+  .tabButton:hover {
+    background: rgba(0, 242, 255, 0.1);
+  }
+  
+  .activeTab {
+    background: #00f2ff;
+    color: #000;
+    text-shadow: none;
+    box-shadow: 0 0 10px #00f2ff;
+  }
+  
+  .contentContainer {
+    padding: 2rem;
+  }
+  
+  .actionButton {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #ff00ff, #00f2ff);
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Monoton', cursive;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 10px rgba(0, 242, 255, 0.5);
+  }
+  
+  .actionButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.8), 0 0 15px rgba(0, 242, 255, 0.8);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

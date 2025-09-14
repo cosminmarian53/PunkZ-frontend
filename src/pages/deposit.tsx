@@ -1,16 +1,18 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Mixer from "../components/Mixer";
+import Statistics from "../components/Statistics";
+import styles from "../styles/Deposit.module.css";
 
 const Deposit: NextPage = () => {
   return (
-    <div>
+    <div className={styles.pageContainer}>
       <Head>
-        <title>Deposit - PunkFi</title>
+        <title>App - PunkZ</title>
       </Head>
-      <div className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold text-cyan-400">Deposit</h1>
-        <p className="text-gray-400">Supply assets to the protocol.</p>
-        {/* Placeholder for deposit content */}
+      <div className={styles.contentWrapper}>
+        <Mixer />
+        <Statistics />
       </div>
     </div>
   );

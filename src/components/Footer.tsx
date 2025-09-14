@@ -7,11 +7,11 @@ const Footer: React.FC = () => {
         <p className="text-fuchsia-200/80 font-medium">
           Made with <span className="text-pink-500">❤️</span> by your frens at{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-purple-500 font-bold">
-            PunkFi
+            PunkZ
           </span>
         </p>
         <p className="text-fuchsia-300/50 text-sm mt-2">
-          © 2025 PunkFi Protocol. All rights reserved.
+          © 2025 PunkZ Protocol. All rights reserved.
         </p>
       </div>
     </footer>

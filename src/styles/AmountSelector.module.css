@@ -1,0 +1,47 @@
+.amountContainer {
+    margin-bottom: 2rem;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    color: #00f2ff;
+    text-shadow: 0 0 3px #00f2ff;
+  }
+  
+  .amountSelector {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    padding: 5px;
+  }
+  
+  .amountButton {
+    flex: 1;
+    background: transparent;
+    border: 1px solid transparent;
+    color: #00f2ff;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Monoton', cursive;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .amountButton:hover {
+    background: rgba(0, 242, 255, 0.1);
+    border-color: rgba(0, 242, 255, 0.5);
+  }
+  
+  .selected {
+    background: #00f2ff;
+    color: #000;
+    text-shadow: none;
+    box-shadow: 0 0 10px #00f2ff;
+  }
+  

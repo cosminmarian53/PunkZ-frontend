@@ -53,18 +53,20 @@ const RetroLoader: React.FC = () => {
       <div className={styles.scanlines}></div>
       <div className={styles.loaderContent}>
         <div className={styles.future}>LOADING</div>
-        <div className={styles.cop}>PUNKFI</div>
+        <div className={styles.cop}>PUNKZ</div>
         <div className={styles.loadingBarContainer}>
           <div className={styles.loadingBar}>
-            <div 
+            <div
               ref={progressBarRef}
-              className={styles.loadingBarProgress} 
+              className={styles.loadingBarProgress}
               style={{ width: `${progress}%` }}
             ></div>
           </div>
           <div className={styles.loadingPercentage}>
             {Math.floor(progress)}%
-            {isComplete && <span className={styles.completeText}> - READY!</span>}
+            {isComplete && (
+              <span className={styles.completeText}> - READY!</span>
+            )}
           </div>
         </div>
       </div>

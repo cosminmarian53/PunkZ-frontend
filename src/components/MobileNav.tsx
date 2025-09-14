@@ -34,64 +34,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
         </svg>
       </button>
 
-      <nav className="flex flex-col items-center space-y-12">
-        <Link href="/dashboard" passHref>
-          <span
-            onClick={onClose}
-            className="text-3xl text-white transition-all duration-300 uppercase tracking-wider"
-            style={{
-              fontFamily: "'Monoton', cursive",
-              letterSpacing: "0.05em",
-              textShadow:
-                "0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff",
-            }}
-          >
-            Dashboard
-          </span>
-        </Link>
-        <Link href="/markets" passHref>
-          <span
-            onClick={onClose}
-            className="text-3xl text-white transition-all duration-300 uppercase tracking-wider"
-            style={{
-              fontFamily: "'Monoton', cursive",
-              letterSpacing: "0.05em",
-              textShadow:
-                "0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00c2ff, 0 0 20px #00c2ff, 0 0 25px #00c2ff",
-            }}
-          >
-            Markets
-          </span>
-        </Link>
-        <Link href="/deposit" passHref>
-          <span
-            onClick={onClose}
-            className="text-3xl text-white transition-all duration-300 uppercase tracking-wider"
-            style={{
-              fontFamily: "'Monoton', cursive",
-              letterSpacing: "0.05em",
-              textShadow:
-                "0 0 5px #fff, 0 0 10px #fff, 0 0 15px #7c3aed, 0 0 20px #7c3aed, 0 0 25px #7c3aed",
-            }}
-          >
-            Deposit
-          </span>
-        </Link>
-        <Link href="/borrow" passHref>
-          <span
-            onClick={onClose}
-            className="text-3xl text-white transition-all duration-300 uppercase tracking-wider"
-            style={{
-              fontFamily: "'Monoton', cursive",
-              letterSpacing: "0.05em",
-              textShadow:
-                "0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff",
-            }}
-          >
-            Borrow
-          </span>
-        </Link>
-      </nav>
+      <nav className="flex flex-col items-center space-y-12"></nav>
 
       <div className="absolute bottom-10 w-1/2 h-1 bg-gradient-to-r from-fuchsia-500 to-purple-500 rounded-full"></div>
     </div>
