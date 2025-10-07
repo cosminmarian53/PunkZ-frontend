@@ -168,8 +168,6 @@ PunkFi uses RainbowKit and wagmi for seamless blockchain integration:
 - [x] 3D scene integration
 - [x] Web3 wallet connectivity
 - [ ] Smart contract integration
-- [ ] Governance features
-- [ ] Mobile app release
 
 ## 📄 License
 
